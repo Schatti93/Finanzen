@@ -1,6 +1,6 @@
 from uebersicht.uebersicht_data import Uebersicht_Data
 from uebersicht.crawler import Crawler
-import re
+from PyQt5 import QtWidgets
 
 class Uebersicht():
     def __init__(self, ui):
@@ -18,7 +18,6 @@ class Uebersicht():
     def aktueller_wert_und_gewinn(self):
         liste = self.uebersicht_data.eigene_aktien_abfrage()
         aktueller_wert_gesamt = 0
-        tabellen_werte = {}
         for i in liste:
             wert = self.crawler.aktueller_wert(i[2])
             if "," in wert:
@@ -27,15 +26,27 @@ class Uebersicht():
                 wert = wert.replace(",", ".")
                 wert = float(wert)
             aktueller_wert_gesamt += wert * i[4]
-            tabellen_werte[i[1]] = 
-
         self.ui.besitz.setText(str(aktueller_wert_gesamt))
 
         # Gesamt ausgaben holen und gewinn berechnen
         ausgaben = self.uebersicht_data.ausgaben()
         self.ui.gewinn.setText(str(aktueller_wert_gesamt - ausgaben[0][0]))
 
+        ###### tabellen werte generieren muss noch erfolgen
 
+        tabellen_werte = {}
 
+        uebergabe_array = []
+
+        self.tabelle_fuellen(uebergabe_array)
+
+    def tabelle_fuellen(self, tabellen_werte):
+        #### produkt anzahl etc durch array werte ersetzen
+        for i in range(0, len(tabellen_werte)):
+            row = self.ui.invest_uebersicht.rowCount()
+            self.ui.invest_uebersicht.setItem(row, 0, QtWidgets.QTableWidgetItem(produkt))
+            self.ui.invest_uebersicht.setItem(row, 1, QtWidgets.QTableWidgetItem(anzahl))
+            self.ui.invest_uebersicht.setItem(row, 2, QtWidgets.QTableWidgetItem(kaufpreis))
+            self.ui.invest_uebersicht.setItem(row, 3, QtWidgets.QTableWidgetItem(wert))
 
 
