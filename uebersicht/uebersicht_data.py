@@ -1,0 +1,20 @@
+import sqlite3
+
+class Uebersicht_Data():
+    def __init__(self):
+        self.conn = sqlite3.connect("Database.db")
+        self.c = self.conn.cursor()
+
+    def __del__(self):
+        self.conn.close()  # zum freigeben der Datenbank
+
+    def ausgaben(self):
+        sql = "SELECT Ausgaben FROM uebersicht"
+        self.c.execute(sql)
+        return self.c.fetchall()
+
+    def eigene_aktien_abfrage(self):
+        sql = "Select * FROM anlagen"
+        self.c.execute(sql)
+        return self.c.fetchall()
+
