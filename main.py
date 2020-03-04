@@ -1,6 +1,7 @@
 import sys
-from ui.finanzen.mainwindow import Ui_MainWindow
 from PyQt5 import QtWidgets
+from ui.finanzen.mainwindow import Ui_MainWindow
+from neuer_eintrag.eintrag import Eintrag
 from uebersicht.uebersicht import Uebersicht
 
 
@@ -12,7 +13,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.setWindowTitle("Finanzen")
         self.uebersicht = Uebersicht(self.ui)
-
+        self.eintrag = Eintrag(self.ui)
 
 
 window = MainWindow()
