@@ -13,3 +13,15 @@ class Eintrag_Data():
         sql = "INSERT INTO anlagen VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)"
         self.c.execute(sql, params)
         self.conn.commit()
+
+    def neuer_eintrag_kredit(self, name, hoehe, invest, zins, laufzeit, rate, datum, kosten):
+        params = (name, hoehe, invest, zins, laufzeit, rate, datum, kosten)
+        sql = "INSERT INTO Kredite VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?)"
+        self.c.execute(sql, params)
+        self.conn.commit()
+
+    def tagesgeld_speichern(self, name, hoehe, zins, datum):
+        params = (name, hoehe, zins, datum)
+        sql = "INSERT INTO tagesgeld VALUES (NULL, ?, ?, ?, ?)"
+        self.c.execute(sql, params)
+        self.conn.commit()

@@ -11,9 +11,12 @@ class Crawler():
         ergebnis = doc.select(".first")[-1].text
         ergebnis = re.split(r"\s+", ergebnis)
         ergebnis = ergebnis[1]
-        if "," in ergebnis:
+        if "." in ergebnis:
             ergebnis = ergebnis.replace(".", "")
+        if "," in ergebnis:
             ergebnis = ergebnis.replace(",", ".")
+        print(suche)
+        print(ergebnis)
         return(ergebnis)
 
 

@@ -18,3 +18,13 @@ class Uebersicht_Data():
         self.c.execute(sql)
         return self.c.fetchall()
 
+    def eigene_kredite_abfragen(self):
+        sql = "SELECT * FROM Kredite"
+        self.c.execute(sql)
+        return self.c.fetchall()
+
+    def tageszins_abfrage(self):
+        sql = "SELECT * FROM tagesgeld"
+        self.c.execute(sql)
+        return self.c.fetchall()
+
