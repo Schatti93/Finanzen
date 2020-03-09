@@ -125,7 +125,7 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
 }</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -724,7 +724,7 @@ gridline-color: #807F81;
       <property name="geometry">
        <rect>
         <x>710</x>
-        <y>500</y>
+        <y>510</y>
         <width>172</width>
         <height>32</height>
        </rect>
@@ -1019,27 +1019,12 @@ QComboBox::drop-down
          </property>
          <item>
           <property name="text">
-           <string>Privat Kredit</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
            <string>Aktie</string>
           </property>
          </item>
          <item>
           <property name="text">
            <string>Währung/Kryptowährung</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Kredit</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Immobilien</string>
           </property>
          </item>
         </widget>

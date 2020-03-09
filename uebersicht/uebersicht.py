@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets
 from datetime import datetime
 
 
+
 class Uebersicht():
     def __init__(self, ui):
         self.ui = ui
@@ -221,7 +222,8 @@ class Uebersicht():
         tages_gewinn = self.ui.tages_gewinn.text()
 
         gewinn_gesamt = float(waehrung_gewinn) + float(kredit_gewinn) + float(tages_gewinn)
-        self.ui.gesamt_gewinn.setText(str(gewinn_gesamt))
+        gewinn_gesamt = round(gewinn_gesamt, 2)
+        self.ui.gesamt_gewinn.setText(str(gewinn_gesamt) + "€")
         if gewinn_gesamt >= 0:
             self.ui.gesamt_gewinn.setStyleSheet("color:#ffffff; font-size:64pt; border: 2px solid green; border-radius: 5px; align= center")
         else:
@@ -232,7 +234,7 @@ class Uebersicht():
         ausgaben_tages = self.ui.tages_ausgaben.text()
         ausgaben_gesamt = float(ausgaben_kredite) + float(ausgaben_tages) + float(ausgaben_waehrung)
         ausgaben_gesamt = round(ausgaben_gesamt, 2)
-        self.ui.gesamt_ausgaben.setText(str(ausgaben_gesamt))
+        self.ui.gesamt_ausgaben.setText(str(ausgaben_gesamt) + "€")
         self.ui.gesamt_ausgaben.setStyleSheet("color:#ffffff; font-size:64pt; border: 2px solid black; border-radius: 5px; align= center")
 
     def neu_laden(self):

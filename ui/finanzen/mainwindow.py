@@ -443,7 +443,7 @@ class Ui_MainWindow(object):
         self.gesamt_ausgaben.setObjectName("gesamt_ausgaben")
         self.verticalLayout_2.addWidget(self.gesamt_ausgaben)
         self.aktualisieren = QtWidgets.QPushButton(self.tab)
-        self.aktualisieren.setGeometry(QtCore.QRect(710, 500, 172, 32))
+        self.aktualisieren.setGeometry(QtCore.QRect(710, 510, 172, 32))
         self.aktualisieren.setStyleSheet("QPushButton{\n"
 "   background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "      border-style: solid;\n"
@@ -675,9 +675,6 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.combo_art.setObjectName("combo_art")
-        self.combo_art.addItem("")
-        self.combo_art.addItem("")
-        self.combo_art.addItem("")
         self.combo_art.addItem("")
         self.combo_art.addItem("")
         self.gridLayout_2.addWidget(self.combo_art, 0, 0, 1, 1)
@@ -1073,7 +1070,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.tabWidget, self.invest_uebersicht)
         MainWindow.setTabOrder(self.invest_uebersicht, self.tages_name)
@@ -1164,11 +1161,8 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>"))
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Anzahl</span></p></body></html>"))
         self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Art</span></p></body></html>"))
-        self.combo_art.setItemText(0, _translate("MainWindow", "Privat Kredit"))
-        self.combo_art.setItemText(1, _translate("MainWindow", "Aktie"))
-        self.combo_art.setItemText(2, _translate("MainWindow", "Währung/Kryptowährung"))
-        self.combo_art.setItemText(3, _translate("MainWindow", "Kredit"))
-        self.combo_art.setItemText(4, _translate("MainWindow", "Immobilien"))
+        self.combo_art.setItemText(0, _translate("MainWindow", "Aktie"))
+        self.combo_art.setItemText(1, _translate("MainWindow", "Währung/Kryptowährung"))
         self.label_zinssatz.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Zinssatz</span></p></body></html>"))
         self.label_laufzeit.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Laufzeit</span></p></body></html>"))
         self.label_19.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Datum beginn Rückzahlung</span></p></body></html>"))

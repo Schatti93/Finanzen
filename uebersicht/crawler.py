@@ -15,8 +15,6 @@ class Crawler():
             ergebnis = ergebnis.replace(".", "")
         if "," in ergebnis:
             ergebnis = ergebnis.replace(",", ".")
-        print(suche)
-        print(ergebnis)
         return(ergebnis)
 
 

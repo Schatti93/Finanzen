@@ -5,6 +5,7 @@ from neuer_eintrag.eintrag import Eintrag
 from uebersicht.uebersicht import Uebersicht
 
 
+
 app = QtWidgets.QApplication(sys.argv)
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
