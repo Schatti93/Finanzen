@@ -19,14 +19,30 @@ class Uebersicht():
         self.gesamt_anzeigen()
         self.ui.aktualisieren.clicked.connect(self.neu_laden)
 
-    def uebersicht_waehrung(self):
+
+    def general_abfrage_crawler(self):
         liste_der_anlagen = self.uebersicht_data.eigene_aktien_abfrage()
+        anlagen_dictionary = {}
+        for i in range(0, len(liste_der_anlagen)):
+            if liste_der_anlagen[i][1] in anlagen_dictionary:
+                pass
+            else:
+                aktueller_wert = self.crawler.aktueller_wert(liste_der_anlagen[i][2])
+                anlagen_dictionary[liste_der_anlagen[i][1]] = aktueller_wert
+        return anlagen_dictionary, liste_der_anlagen
+
+
+    def uebersicht_waehrung(self):
+        daten_holen = self.general_abfrage_crawler()
+        liste_der_anlagen = daten_holen[1]
+        dictionary = daten_holen[0]
+
         ausgaben = 0.0
         wert = 0.0
         gewinn = 0.0
         for i in range(0, len(liste_der_anlagen)):
             if liste_der_anlagen[i][5] == "Währung/Kryptowährung" or liste_der_anlagen[i][5] == "Aktie":
-                aktueller_wert = self.crawler.aktueller_wert(liste_der_anlagen[i][2])
+                aktueller_wert = dictionary[liste_der_anlagen[i][1]]
                 wert += float(aktueller_wert) * float(liste_der_anlagen[i][4])
                 ausgaben += float(liste_der_anlagen[i][3])
 
@@ -125,17 +141,21 @@ class Uebersicht():
         self.ui.tages_gewinn.setText(str(gewinn))
         self.ui.tages_gewinn.setStyleSheet("color:#ffffff")
 
-    ### index bauen um das staendige webcrawling zu vermeiden
+    
     def tabelle_fuellen_waehrung(self):
-        liste_der_anlagen = self.uebersicht_data.eigene_aktien_abfrage()
         liste_der_eintraege = []
+        daten_holen = self.general_abfrage_crawler()
+        liste_der_anlagen = daten_holen[1]
+        dict = daten_holen[0]
+
+
         for i in range(0, len(liste_der_anlagen)):
 
             liste = []
             liste.append(liste_der_anlagen[i][1])
             liste.append(liste_der_anlagen[i][3])
             liste.append(liste_der_anlagen[i][4])
-            aktueller_wert = float(self.crawler.aktueller_wert(liste_der_anlagen[i][2])) * float(liste_der_anlagen[i][4])
+            aktueller_wert = float(dict[liste_der_anlagen[i][1]]) * float(liste_der_anlagen[i][4])
             aktueller_wert = round(aktueller_wert, 2)
             liste.append(aktueller_wert)
             liste_der_eintraege.append(liste)
@@ -145,7 +165,7 @@ class Uebersicht():
                 liste.append(liste_der_anlagen[i][1])
                 liste.append(liste_der_anlagen[i][3])
                 liste.append(liste_der_anlagen[i][4])
-                aktueller_wert = float(self.crawler.aktueller_wert(liste_der_anlagen[i][2])) * float(liste_der_anlagen[i][4])
+                aktueller_wert = float(dict[liste_der_anlagen[i][2]]) * float(liste_der_anlagen[i][4])
                 aktueller_wert = round(aktueller_wert, 2)
                 liste.append(float(aktueller_wert))
                 liste_der_eintraege.append(liste)
