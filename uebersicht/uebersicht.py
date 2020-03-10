@@ -33,7 +33,10 @@ class Uebersicht():
         wert = round(wert, 2)
         ausgaben = round(ausgaben, 2)
         gewinn = round((wert - ausgaben), 2)
-
+        prozent = gewinn / (wert / 100)
+        prozent = round(prozent, 2)
+        self.ui.prozent.setText(str(prozent) + "%")
+        self.ui.prozent.setStyleSheet("color:#ffffff")
         self.ui.besitz.setText(str(wert))
         self.ui.besitz.setStyleSheet("color:#ffffff")
         self.ui.ausgaben.setText(str(ausgaben))
@@ -62,7 +65,11 @@ class Uebersicht():
         ausgaben_kredit = round(ausgaben_kredit, 2)
         wert_kredit = round(wert_kredit, 2)
         gewinn_kredit = round(gewinn_kredit, 2)
+        prozent = gewinn_kredit / (wert_kredit / 100)
+        prozent = round(prozent, 2)
 
+        self.ui.prozent_kredit.setText(str(prozent) + "%")
+        self.ui.prozent_kredit.setStyleSheet("color:#ffffff")
         self.ui.ausgaben_kredit.setText(str(ausgaben_kredit))
         self.ui.ausgaben_kredit.setStyleSheet("color:#ffffff")
         self.ui.summe_kredit.setText(str(wert_kredit))
@@ -106,7 +113,11 @@ class Uebersicht():
         gewinn = gesamt_wert - ausgaben_gesamt
         ausgaben_gesamt = round(ausgaben_gesamt, 2)
         gewinn = round(gewinn, 2)
+        prozent = gewinn / (gesamt_wert / 100)
+        prozent = round(prozent, 2)
 
+        self.ui.tages_prozent.setText(str(prozent) + "%")
+        self.ui.tages_prozent.setStyleSheet("color:#ffffff")
         self.ui.tages_ausgaben.setText(str(ausgaben_gesamt))
         self.ui.tages_ausgaben.setStyleSheet("color:#ffffff")
         self.ui.tages_hoehe.setText(str(gesamt_wert))
@@ -119,32 +130,26 @@ class Uebersicht():
         liste_der_anlagen = self.uebersicht_data.eigene_aktien_abfrage()
         liste_der_eintraege = []
         for i in range(0, len(liste_der_anlagen)):
-            if liste_der_anlagen[i][5] == "Währung/Kryptowährung" or liste_der_anlagen[i][5] == "Aktie":
-                for p in range(0, len(liste_der_eintraege)):
-                    if liste_der_anlagen[i][2] in liste_der_anlagen[p]:
-                        liste_der_eintraege[p][1] = liste_der_eintraege[p][1] + liste_der_anlagen[i][3]
-                        liste_der_eintraege[p][2] = liste_der_eintraege[p][2] + liste_der_anlagen[i][4]
-                        aktueller_wert = float(self.crawler.aktueller_wert(liste_der_anlagen[i][2])) * float(liste_der_anlagen[i][4])
-                        aktueller_wert = round(aktueller_wert, 2)
-                        liste_der_eintraege[p][3] += aktueller_wert
-                    else:
-                        liste = []
-                        liste.append(liste_der_anlagen[i][1])
-                        liste.append(liste_der_anlagen[i][3])
-                        liste.append(liste_der_anlagen[i][4])
-                        aktueller_wert = float(self.crawler.aktueller_wert(liste_der_anlagen[i][2])) * float(liste_der_anlagen[i][4])
-                        aktueller_wert = round(aktueller_wert, 2)
-                        liste.append(aktueller_wert)
-                        liste_der_eintraege.append(liste)
-                if len(liste_der_eintraege) == 0:
-                    liste = []
-                    liste.append(liste_der_anlagen[i][1])
-                    liste.append(liste_der_anlagen[i][3])
-                    liste.append(liste_der_anlagen[i][4])
-                    aktueller_wert = float(self.crawler.aktueller_wert(liste_der_anlagen[i][2])) * float(liste_der_anlagen[i][4])
-                    aktueller_wert = round(aktueller_wert, 2)
-                    liste.append(float(aktueller_wert))
-                    liste_der_eintraege.append(liste)
+
+            liste = []
+            liste.append(liste_der_anlagen[i][1])
+            liste.append(liste_der_anlagen[i][3])
+            liste.append(liste_der_anlagen[i][4])
+            aktueller_wert = float(self.crawler.aktueller_wert(liste_der_anlagen[i][2])) * float(liste_der_anlagen[i][4])
+            aktueller_wert = round(aktueller_wert, 2)
+            liste.append(aktueller_wert)
+            liste_der_eintraege.append(liste)
+
+            if len(liste_der_eintraege) == 0:
+                liste = []
+                liste.append(liste_der_anlagen[i][1])
+                liste.append(liste_der_anlagen[i][3])
+                liste.append(liste_der_anlagen[i][4])
+                aktueller_wert = float(self.crawler.aktueller_wert(liste_der_anlagen[i][2])) * float(liste_der_anlagen[i][4])
+                aktueller_wert = round(aktueller_wert, 2)
+                liste.append(float(aktueller_wert))
+                liste_der_eintraege.append(liste)
+
             else:
                 pass
 
@@ -152,9 +157,11 @@ class Uebersicht():
         for i in range(0, len(liste_der_eintraege)):
             row = self.ui.invest_uebersicht.rowCount()
             self.ui.invest_uebersicht.insertRow(row)
+            anzahl = round(liste_der_eintraege[i][2], 4)
+            wert = round(liste_der_eintraege[i][1], 2)
             self.ui.invest_uebersicht.setItem(row, 0, QtWidgets.QTableWidgetItem(str(liste_der_eintraege[i][0])))
-            self.ui.invest_uebersicht.setItem(row, 1, QtWidgets.QTableWidgetItem(str(liste_der_eintraege[i][2])))
-            self.ui.invest_uebersicht.setItem(row, 2, QtWidgets.QTableWidgetItem(str(liste_der_eintraege[i][1])))
+            self.ui.invest_uebersicht.setItem(row, 1, QtWidgets.QTableWidgetItem(str(anzahl)))
+            self.ui.invest_uebersicht.setItem(row, 2, QtWidgets.QTableWidgetItem(str(wert)))
             self.ui.invest_uebersicht.setItem(row, 3, QtWidgets.QTableWidgetItem(str(liste_der_eintraege[i][3])))
 
 
@@ -205,6 +212,7 @@ class Uebersicht():
             for i in range(0, len(liste_der_daten)):
                 row = self.ui.tages_uebersicht.rowCount()
                 self.ui.tages_uebersicht.insertRow(row)
+
                 self.ui.tages_uebersicht.setItem(row, 0, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][1])))
                 self.ui.tages_uebersicht.setItem(row, 1, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][2])))
                 self.ui.tages_uebersicht.setItem(row, 2, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][3])))
@@ -236,6 +244,15 @@ class Uebersicht():
         ausgaben_gesamt = round(ausgaben_gesamt, 2)
         self.ui.gesamt_ausgaben.setText(str(ausgaben_gesamt) + "€")
         self.ui.gesamt_ausgaben.setStyleSheet("color:#ffffff; font-size:64pt; border: 2px solid black; border-radius: 5px; align= center")
+
+        prozent_tages = self.ui.tages_prozent.text().split("%")
+        prozent_kredit = self.ui.prozent_kredit.text().split("%")
+        prozent_waehrung = self.ui.prozent.text().split("%")
+
+        gesamt_prozent = (float(prozent_tages[0]) + float(prozent_kredit[0]) + float(prozent_waehrung[0])) / 3
+        gesamt_prozent = round(gesamt_prozent, 2)
+        self.ui.gesamt_prozent.setText(str(gesamt_prozent) + "%")
+        self.ui.gesamt_prozent.setStyleSheet("color:#ffffff; font-size:64pt; border: 2px solid black; border-radius: 5px; align= center")
 
     def neu_laden(self):
         self.ui.invest_uebersicht.setRowCount(0)
