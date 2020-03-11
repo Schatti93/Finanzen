@@ -534,47 +534,21 @@ class Ui_MainWindow(object):
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.gridLayoutWidget_2 = QtWidgets.QWidget(self.tab_2)
-        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(360, 20, 351, 282))
+        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(360, 20, 381, 248))
         self.gridLayoutWidget_2.setObjectName("gridLayoutWidget_2")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.gridLayoutWidget_2)
-        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.label_5 = QtWidgets.QLabel(self.gridLayoutWidget_2)
-        self.label_5.setObjectName("label_5")
-        self.gridLayout_2.addWidget(self.label_5, 2, 1, 1, 1)
-        self.label_6 = QtWidgets.QLabel(self.gridLayoutWidget_2)
-        self.label_6.setObjectName("label_6")
-        self.gridLayout_2.addWidget(self.label_6, 3, 1, 1, 1)
-        self.text_anzahl = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
-        self.text_anzahl.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
-"border: 1px inset darkgrey;\n"
-"border-radius: 10px;\n"
-"padding: 0 8px;\n"
-"selection-background-color: darkgray;\n"
-"font-size: 13px;\n"
-"color: white;\n"
-"}\n"
-"QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
-"")
-        self.text_anzahl.setObjectName("text_anzahl")
-        self.gridLayout_2.addWidget(self.text_anzahl, 4, 0, 1, 1)
+        self.aktie_layout = QtWidgets.QGridLayout(self.gridLayoutWidget_2)
+        self.aktie_layout.setContentsMargins(0, 0, 0, 0)
+        self.aktie_layout.setObjectName("aktie_layout")
+        self.label_8 = QtWidgets.QLabel(self.gridLayoutWidget_2)
+        self.label_8.setObjectName("label_8")
+        self.aktie_layout.addWidget(self.label_8, 0, 1, 1, 1)
+        self.label_7 = QtWidgets.QLabel(self.gridLayoutWidget_2)
+        self.label_7.setObjectName("label_7")
+        self.aktie_layout.addWidget(self.label_7, 5, 1, 1, 1)
         self.error_eintrag = QtWidgets.QLabel(self.gridLayoutWidget_2)
         self.error_eintrag.setText("")
         self.error_eintrag.setObjectName("error_eintrag")
-        self.gridLayout_2.addWidget(self.error_eintrag, 8, 0, 1, 2)
-        self.text_url = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
-        self.text_url.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
-"border: 1px inset darkgrey;\n"
-"border-radius: 10px;\n"
-"padding: 0 8px;\n"
-"selection-background-color: darkgray;\n"
-"font-size: 13px;\n"
-"color: white;\n"
-"}\n"
-"QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
-"")
-        self.text_url.setObjectName("text_url")
-        self.gridLayout_2.addWidget(self.text_url, 2, 0, 1, 1)
+        self.aktie_layout.addWidget(self.error_eintrag, 7, 0, 1, 2)
         self.text_name = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
         self.text_name.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -587,33 +561,10 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.text_name.setObjectName("text_name")
-        self.gridLayout_2.addWidget(self.text_name, 1, 0, 1, 1)
-        self.text_zinssatz = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
-        self.text_zinssatz.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
-"border: 1px inset darkgrey;\n"
-"border-radius: 10px;\n"
-"padding: 0 8px;\n"
-"selection-background-color: darkgray;\n"
-"font-size: 13px;\n"
-"color: white;\n"
-"}\n"
-"QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
-"")
-        self.text_zinssatz.setObjectName("text_zinssatz")
-        self.gridLayout_2.addWidget(self.text_zinssatz, 5, 0, 1, 1)
-        self.text_ausgabe = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
-        self.text_ausgabe.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
-"border: 1px inset darkgrey;\n"
-"border-radius: 10px;\n"
-"padding: 0 8px;\n"
-"selection-background-color: darkgray;\n"
-"font-size: 13px;\n"
-"color: white;\n"
-"}\n"
-"QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
-"")
-        self.text_ausgabe.setObjectName("text_ausgabe")
-        self.gridLayout_2.addWidget(self.text_ausgabe, 3, 0, 1, 1)
+        self.aktie_layout.addWidget(self.text_name, 1, 0, 1, 1)
+        self.label_4 = QtWidgets.QLabel(self.gridLayoutWidget_2)
+        self.label_4.setObjectName("label_4")
+        self.aktie_layout.addWidget(self.label_4, 1, 1, 1, 1)
         self.eintrag_speichern = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.eintrag_speichern.setStyleSheet("QPushButton{\n"
 "   background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
@@ -650,16 +601,26 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.eintrag_speichern.setObjectName("eintrag_speichern")
-        self.gridLayout_2.addWidget(self.eintrag_speichern, 9, 0, 1, 2)
-        self.label_4 = QtWidgets.QLabel(self.gridLayoutWidget_2)
-        self.label_4.setObjectName("label_4")
-        self.gridLayout_2.addWidget(self.label_4, 1, 1, 1, 1)
-        self.label_7 = QtWidgets.QLabel(self.gridLayoutWidget_2)
-        self.label_7.setObjectName("label_7")
-        self.gridLayout_2.addWidget(self.label_7, 4, 1, 1, 1)
-        self.label_8 = QtWidgets.QLabel(self.gridLayoutWidget_2)
-        self.label_8.setObjectName("label_8")
-        self.gridLayout_2.addWidget(self.label_8, 0, 1, 1, 1)
+        self.aktie_layout.addWidget(self.eintrag_speichern, 8, 0, 1, 2)
+        self.label_6 = QtWidgets.QLabel(self.gridLayoutWidget_2)
+        self.label_6.setObjectName("label_6")
+        self.aktie_layout.addWidget(self.label_6, 4, 1, 1, 1)
+        self.url_label = QtWidgets.QLabel(self.gridLayoutWidget_2)
+        self.url_label.setObjectName("url_label")
+        self.aktie_layout.addWidget(self.url_label, 3, 1, 1, 1)
+        self.text_ausgabe = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
+        self.text_ausgabe.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
+"border: 1px inset darkgrey;\n"
+"border-radius: 10px;\n"
+"padding: 0 8px;\n"
+"selection-background-color: darkgray;\n"
+"font-size: 13px;\n"
+"color: white;\n"
+"}\n"
+"QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
+"")
+        self.text_ausgabe.setObjectName("text_ausgabe")
+        self.aktie_layout.addWidget(self.text_ausgabe, 4, 0, 1, 1)
         self.combo_art = QtWidgets.QComboBox(self.gridLayoutWidget_2)
         self.combo_art.setStyleSheet("QComboBox\n"
 "{\n"
@@ -728,9 +689,9 @@ class Ui_MainWindow(object):
         self.combo_art.setObjectName("combo_art")
         self.combo_art.addItem("")
         self.combo_art.addItem("")
-        self.gridLayout_2.addWidget(self.combo_art, 0, 0, 1, 1)
-        self.text_laufzeit = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
-        self.text_laufzeit.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
+        self.aktie_layout.addWidget(self.combo_art, 0, 0, 1, 1)
+        self.text_anzahl = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
+        self.text_anzahl.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
 "border-radius: 10px;\n"
 "padding: 0 8px;\n"
@@ -740,23 +701,100 @@ class Ui_MainWindow(object):
 "}\n"
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
-        self.text_laufzeit.setObjectName("text_laufzeit")
-        self.gridLayout_2.addWidget(self.text_laufzeit, 6, 0, 1, 1)
-        self.label_zinssatz = QtWidgets.QLabel(self.gridLayoutWidget_2)
-        self.label_zinssatz.setObjectName("label_zinssatz")
-        self.gridLayout_2.addWidget(self.label_zinssatz, 5, 1, 1, 1)
-        self.label_laufzeit = QtWidgets.QLabel(self.gridLayoutWidget_2)
-        self.label_laufzeit.setObjectName("label_laufzeit")
-        self.gridLayout_2.addWidget(self.label_laufzeit, 6, 1, 1, 1)
+        self.text_anzahl.setObjectName("text_anzahl")
+        self.aktie_layout.addWidget(self.text_anzahl, 5, 0, 1, 1)
+        self.text_url = QtWidgets.QLineEdit(self.gridLayoutWidget_2)
+        self.text_url.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
+"border: 1px inset darkgrey;\n"
+"border-radius: 10px;\n"
+"padding: 0 8px;\n"
+"selection-background-color: darkgray;\n"
+"font-size: 13px;\n"
+"color: white;\n"
+"}\n"
+"QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
+"")
+        self.text_url.setObjectName("text_url")
+        self.aktie_layout.addWidget(self.text_url, 3, 0, 1, 1)
+        self.url_combobox = QtWidgets.QComboBox(self.gridLayoutWidget_2)
+        self.url_combobox.setStyleSheet("QComboBox\n"
+"{\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    selection-background-color: #111;\n"
+"    selection-color: white;\n"
+"    color: white;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
+"    border-style: solid;\n"
+"    border: 1px solid #1e1e1e;\n"
+"    border-radius: 5;\n"
+"    padding: 1px 0px 1px 20px;\n"
+"}\n"
+"\n"
+"\n"
+"QComboBox:hover, QPushButton:hover\n"
+"{\n"
+"    border: 1px solid teal;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QComboBox:editable {\n"
+"    background: red;\n"
+"    color: pink;\n"
+"}\n"
+"\n"
+"QComboBox:on\n"
+"{\n"
+"    padding-top: 0px;\n"
+"    padding-left: 0px;\n"
+"    color: white;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);\n"
+"    selection-background-color: rgb(67, 131, 202);\n"
+"}\n"
+"\n"
+"QComboBox:!on\n"
+"{\n"
+"    color: white;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #666, stop: 0.1 #555, stop: 0.5 #555, stop: 0.9 #444, stop: 1 #333);\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView\n"
+"{\n"
+"    border: 2px solid darkgray;\n"
+"    color: black;\n"
+"    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #111, stop: 1 #333);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down\n"
+"{\n"
+"     subcontrol-origin: padding;\n"
+"     subcontrol-position: top right;\n"
+"     width: 15px;\n"
+"     color: white;\n"
+"     border-left-width: 1px;\n"
+"     border-left-color: darkgray;\n"
+"     border-left-style: solid; /* just a single line */\n"
+"     border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
+"     border-bottom-right-radius: 3px;\n"
+"     padding-left: 10px;\n"
+" }\n"
+"\n"
+"\n"
+"")
+        self.url_combobox.setObjectName("url_combobox")
+        self.aktie_layout.addWidget(self.url_combobox, 2, 0, 1, 1)
+        self.label_35 = QtWidgets.QLabel(self.gridLayoutWidget_2)
+        self.label_35.setObjectName("label_35")
+        self.aktie_layout.addWidget(self.label_35, 2, 1, 1, 1)
         self.gridLayoutWidget_4 = QtWidgets.QWidget(self.tab_2)
         self.gridLayoutWidget_4.setGeometry(QtCore.QRect(780, 10, 379, 341))
         self.gridLayoutWidget_4.setObjectName("gridLayoutWidget_4")
-        self.gridLayout_4 = QtWidgets.QGridLayout(self.gridLayoutWidget_4)
-        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.kredit_layout = QtWidgets.QGridLayout(self.gridLayoutWidget_4)
+        self.kredit_layout.setContentsMargins(0, 0, 0, 0)
+        self.kredit_layout.setObjectName("kredit_layout")
         self.label_19 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_19.setObjectName("label_19")
-        self.gridLayout_4.addWidget(self.label_19, 7, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_19, 7, 1, 1, 1)
         self.kredit_kosten = QtWidgets.QLineEdit(self.gridLayoutWidget_4)
         self.kredit_kosten.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -769,10 +807,10 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.kredit_kosten.setObjectName("kredit_kosten")
-        self.gridLayout_4.addWidget(self.kredit_kosten, 8, 0, 1, 1)
+        self.kredit_layout.addWidget(self.kredit_kosten, 8, 0, 1, 1)
         self.label_17 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_17.setObjectName("label_17")
-        self.gridLayout_4.addWidget(self.label_17, 4, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_17, 4, 1, 1, 1)
         self.kredit_name = QtWidgets.QLineEdit(self.gridLayoutWidget_4)
         self.kredit_name.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -785,7 +823,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.kredit_name.setObjectName("kredit_name")
-        self.gridLayout_4.addWidget(self.kredit_name, 1, 0, 1, 1)
+        self.kredit_layout.addWidget(self.kredit_name, 1, 0, 1, 1)
         self.combo_art_2 = QtWidgets.QComboBox(self.gridLayoutWidget_4)
         self.combo_art_2.setStyleSheet("QComboBox\n"
 "{\n"
@@ -855,7 +893,7 @@ class Ui_MainWindow(object):
         self.combo_art_2.addItem("")
         self.combo_art_2.addItem("")
         self.combo_art_2.addItem("")
-        self.gridLayout_4.addWidget(self.combo_art_2, 0, 0, 1, 1)
+        self.kredit_layout.addWidget(self.combo_art_2, 0, 0, 1, 1)
         self.kredit_hoehe = QtWidgets.QLineEdit(self.gridLayoutWidget_4)
         self.kredit_hoehe.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -868,7 +906,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.kredit_hoehe.setObjectName("kredit_hoehe")
-        self.gridLayout_4.addWidget(self.kredit_hoehe, 2, 0, 1, 1)
+        self.kredit_layout.addWidget(self.kredit_hoehe, 2, 0, 1, 1)
         self.kredit_invest = QtWidgets.QLineEdit(self.gridLayoutWidget_4)
         self.kredit_invest.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -881,10 +919,10 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.kredit_invest.setObjectName("kredit_invest")
-        self.gridLayout_4.addWidget(self.kredit_invest, 3, 0, 1, 1)
+        self.kredit_layout.addWidget(self.kredit_invest, 3, 0, 1, 1)
         self.label_zinssatz_2 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_zinssatz_2.setObjectName("label_zinssatz_2")
-        self.gridLayout_4.addWidget(self.label_zinssatz_2, 5, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_zinssatz_2, 5, 1, 1, 1)
         self.kredit_datum = QtWidgets.QLineEdit(self.gridLayoutWidget_4)
         self.kredit_datum.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -897,10 +935,10 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.kredit_datum.setObjectName("kredit_datum")
-        self.gridLayout_4.addWidget(self.kredit_datum, 7, 0, 1, 1)
+        self.kredit_layout.addWidget(self.kredit_datum, 7, 0, 1, 1)
         self.label_18 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_18.setObjectName("label_18")
-        self.gridLayout_4.addWidget(self.label_18, 0, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_18, 0, 1, 1, 1)
         self.kredit_speichern = QtWidgets.QPushButton(self.gridLayoutWidget_4)
         self.kredit_speichern.setStyleSheet("QPushButton{\n"
 "   background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
@@ -937,13 +975,13 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.kredit_speichern.setObjectName("kredit_speichern")
-        self.gridLayout_4.addWidget(self.kredit_speichern, 11, 0, 1, 2)
+        self.kredit_layout.addWidget(self.kredit_speichern, 11, 0, 1, 2)
         self.label_laufzeit_2 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_laufzeit_2.setObjectName("label_laufzeit_2")
-        self.gridLayout_4.addWidget(self.label_laufzeit_2, 6, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_laufzeit_2, 6, 1, 1, 1)
         self.label_15 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_15.setObjectName("label_15")
-        self.gridLayout_4.addWidget(self.label_15, 3, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_15, 3, 1, 1, 1)
         self.kredit_rate = QtWidgets.QLineEdit(self.gridLayoutWidget_4)
         self.kredit_rate.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -956,10 +994,10 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.kredit_rate.setObjectName("kredit_rate")
-        self.gridLayout_4.addWidget(self.kredit_rate, 6, 0, 1, 1)
+        self.kredit_layout.addWidget(self.kredit_rate, 6, 0, 1, 1)
         self.label_20 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_20.setObjectName("label_20")
-        self.gridLayout_4.addWidget(self.label_20, 8, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_20, 8, 1, 1, 1)
         self.kredit_laufzeit = QtWidgets.QLineEdit(self.gridLayoutWidget_4)
         self.kredit_laufzeit.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -972,13 +1010,13 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.kredit_laufzeit.setObjectName("kredit_laufzeit")
-        self.gridLayout_4.addWidget(self.kredit_laufzeit, 5, 0, 1, 1)
+        self.kredit_layout.addWidget(self.kredit_laufzeit, 5, 0, 1, 1)
         self.label_14 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_14.setObjectName("label_14")
-        self.gridLayout_4.addWidget(self.label_14, 2, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_14, 2, 1, 1, 1)
         self.label_16 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_16.setObjectName("label_16")
-        self.gridLayout_4.addWidget(self.label_16, 1, 1, 1, 1)
+        self.kredit_layout.addWidget(self.label_16, 1, 1, 1, 1)
         self.kredit_zins = QtWidgets.QLineEdit(self.gridLayoutWidget_4)
         self.kredit_zins.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -991,17 +1029,17 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.kredit_zins.setObjectName("kredit_zins")
-        self.gridLayout_4.addWidget(self.kredit_zins, 4, 0, 1, 1)
-        self.error_eintrag_2 = QtWidgets.QLabel(self.gridLayoutWidget_4)
-        self.error_eintrag_2.setText("")
-        self.error_eintrag_2.setObjectName("error_eintrag_2")
-        self.gridLayout_4.addWidget(self.error_eintrag_2, 10, 0, 1, 2)
+        self.kredit_layout.addWidget(self.kredit_zins, 4, 0, 1, 1)
+        self.error_kredit = QtWidgets.QLabel(self.gridLayoutWidget_4)
+        self.error_kredit.setText("")
+        self.error_kredit.setObjectName("error_kredit")
+        self.kredit_layout.addWidget(self.error_kredit, 10, 0, 1, 2)
         self.gridLayoutWidget_5 = QtWidgets.QWidget(self.tab_2)
-        self.gridLayoutWidget_5.setGeometry(QtCore.QRect(20, 20, 271, 206))
+        self.gridLayoutWidget_5.setGeometry(QtCore.QRect(360, 290, 381, 206))
         self.gridLayoutWidget_5.setObjectName("gridLayoutWidget_5")
-        self.gridLayout_5 = QtWidgets.QGridLayout(self.gridLayoutWidget_5)
-        self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_5.setObjectName("gridLayout_5")
+        self.tagesgeld_layout = QtWidgets.QGridLayout(self.gridLayoutWidget_5)
+        self.tagesgeld_layout.setContentsMargins(0, 0, 0, 0)
+        self.tagesgeld_layout.setObjectName("tagesgeld_layout")
         self.tages_speichern = QtWidgets.QPushButton(self.gridLayoutWidget_5)
         self.tages_speichern.setStyleSheet("QPushButton{\n"
 "   background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
@@ -1038,7 +1076,7 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.tages_speichern.setObjectName("tages_speichern")
-        self.gridLayout_5.addWidget(self.tages_speichern, 6, 0, 1, 2)
+        self.tagesgeld_layout.addWidget(self.tages_speichern, 6, 0, 1, 2)
         self.tages_wert = QtWidgets.QLineEdit(self.gridLayoutWidget_5)
         self.tages_wert.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -1051,7 +1089,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.tages_wert.setObjectName("tages_wert")
-        self.gridLayout_5.addWidget(self.tages_wert, 2, 0, 1, 1)
+        self.tagesgeld_layout.addWidget(self.tages_wert, 2, 0, 1, 1)
         self.tages_datum = QtWidgets.QLineEdit(self.gridLayoutWidget_5)
         self.tages_datum.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -1064,22 +1102,22 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.tages_datum.setObjectName("tages_datum")
-        self.gridLayout_5.addWidget(self.tages_datum, 4, 0, 1, 1)
+        self.tagesgeld_layout.addWidget(self.tages_datum, 4, 0, 1, 1)
         self.label_22 = QtWidgets.QLabel(self.gridLayoutWidget_5)
         self.label_22.setObjectName("label_22")
-        self.gridLayout_5.addWidget(self.label_22, 1, 1, 1, 1)
+        self.tagesgeld_layout.addWidget(self.label_22, 1, 1, 1, 1)
         self.label_24 = QtWidgets.QLabel(self.gridLayoutWidget_5)
         self.label_24.setObjectName("label_24")
-        self.gridLayout_5.addWidget(self.label_24, 3, 1, 1, 1)
+        self.tagesgeld_layout.addWidget(self.label_24, 3, 1, 1, 1)
         self.label_25 = QtWidgets.QLabel(self.gridLayoutWidget_5)
         self.label_25.setObjectName("label_25")
-        self.gridLayout_5.addWidget(self.label_25, 4, 1, 1, 1)
+        self.tagesgeld_layout.addWidget(self.label_25, 4, 1, 1, 1)
         self.label_21 = QtWidgets.QLabel(self.gridLayoutWidget_5)
         self.label_21.setObjectName("label_21")
-        self.gridLayout_5.addWidget(self.label_21, 0, 0, 1, 1)
+        self.tagesgeld_layout.addWidget(self.label_21, 0, 0, 1, 1)
         self.label_23 = QtWidgets.QLabel(self.gridLayoutWidget_5)
         self.label_23.setObjectName("label_23")
-        self.gridLayout_5.addWidget(self.label_23, 2, 1, 1, 1)
+        self.tagesgeld_layout.addWidget(self.label_23, 2, 1, 1, 1)
         self.tages_name = QtWidgets.QLineEdit(self.gridLayoutWidget_5)
         self.tages_name.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -1092,7 +1130,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.tages_name.setObjectName("tages_name")
-        self.gridLayout_5.addWidget(self.tages_name, 1, 0, 1, 1)
+        self.tagesgeld_layout.addWidget(self.tages_name, 1, 0, 1, 1)
         self.tages_zins = QtWidgets.QLineEdit(self.gridLayoutWidget_5)
         self.tages_zins.setStyleSheet("QLineEdit{ background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #929394, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
 "border: 1px inset darkgrey;\n"
@@ -1105,11 +1143,81 @@ class Ui_MainWindow(object):
 "QLineEdit:focus { background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0.1 #bababa, stop: 0.5 #919191, stop: 0.9 #7a7a7a, stop: 1 #5b5b5b);}\n"
 "")
         self.tages_zins.setObjectName("tages_zins")
-        self.gridLayout_5.addWidget(self.tages_zins, 3, 0, 1, 1)
+        self.tagesgeld_layout.addWidget(self.tages_zins, 3, 0, 1, 1)
         self.tages_error = QtWidgets.QLabel(self.gridLayoutWidget_5)
         self.tages_error.setText("")
         self.tages_error.setObjectName("tages_error")
-        self.gridLayout_5.addWidget(self.tages_error, 5, 0, 1, 1)
+        self.tagesgeld_layout.addWidget(self.tages_error, 5, 0, 1, 1)
+        self.auswahl_neuer_eintrag_combo = QtWidgets.QComboBox(self.tab_2)
+        self.auswahl_neuer_eintrag_combo.setGeometry(QtCore.QRect(10, 20, 301, 31))
+        self.auswahl_neuer_eintrag_combo.setStyleSheet("QComboBox\n"
+"{\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    selection-background-color: #111;\n"
+"    selection-color: white;\n"
+"    color: white;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);\n"
+"    border-style: solid;\n"
+"    border: 1px solid #1e1e1e;\n"
+"    border-radius: 5;\n"
+"    padding: 1px 0px 1px 20px;\n"
+"}\n"
+"\n"
+"\n"
+"QComboBox:hover, QPushButton:hover\n"
+"{\n"
+"    border: 1px solid teal;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QComboBox:editable {\n"
+"    background: red;\n"
+"    color: pink;\n"
+"}\n"
+"\n"
+"QComboBox:on\n"
+"{\n"
+"    padding-top: 0px;\n"
+"    padding-left: 0px;\n"
+"    color: white;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);\n"
+"    selection-background-color: rgb(67, 131, 202);\n"
+"}\n"
+"\n"
+"QComboBox:!on\n"
+"{\n"
+"    color: white;\n"
+"    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #666, stop: 0.1 #555, stop: 0.5 #555, stop: 0.9 #444, stop: 1 #333);\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView\n"
+"{\n"
+"    border: 2px solid darkgray;\n"
+"    color: black;\n"
+"    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #111, stop: 1 #333);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down\n"
+"{\n"
+"     subcontrol-origin: padding;\n"
+"     subcontrol-position: top right;\n"
+"     width: 15px;\n"
+"     color: white;\n"
+"     border-left-width: 1px;\n"
+"     border-left-color: darkgray;\n"
+"     border-left-style: solid; /* just a single line */\n"
+"     border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
+"     border-bottom-right-radius: 3px;\n"
+"     padding-left: 10px;\n"
+" }\n"
+"\n"
+"\n"
+"")
+        self.auswahl_neuer_eintrag_combo.setObjectName("auswahl_neuer_eintrag_combo")
+        self.auswahl_neuer_eintrag_combo.addItem("")
+        self.auswahl_neuer_eintrag_combo.addItem("")
+        self.auswahl_neuer_eintrag_combo.addItem("")
         self.tabWidget.addTab(self.tab_2, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -1121,7 +1229,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.tabWidget, self.invest_uebersicht)
         MainWindow.setTabOrder(self.invest_uebersicht, self.tages_name)
@@ -1134,9 +1242,7 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(self.text_name, self.text_url)
         MainWindow.setTabOrder(self.text_url, self.text_ausgabe)
         MainWindow.setTabOrder(self.text_ausgabe, self.text_anzahl)
-        MainWindow.setTabOrder(self.text_anzahl, self.text_zinssatz)
-        MainWindow.setTabOrder(self.text_zinssatz, self.text_laufzeit)
-        MainWindow.setTabOrder(self.text_laufzeit, self.eintrag_speichern)
+        MainWindow.setTabOrder(self.text_anzahl, self.eintrag_speichern)
         MainWindow.setTabOrder(self.eintrag_speichern, self.combo_art_2)
         MainWindow.setTabOrder(self.combo_art_2, self.kredit_name)
         MainWindow.setTabOrder(self.kredit_name, self.kredit_hoehe)
@@ -1214,16 +1320,15 @@ class Ui_MainWindow(object):
         self.label_30.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600; text-decoration: underline; color:#ffffff;\">Gesamt Gewinn</span></p></body></html>"))
         self.gesamt_gewinn.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:64pt; color:#00ff00;\">+</span><span style=\" font-size:64pt; color:#ffffff;\">0</span></p></body></html>"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Übersicht"))
-        self.label_5.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">URL</span></p></body></html>"))
-        self.label_6.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Ausgabe</span></p></body></html>"))
-        self.eintrag_speichern.setText(_translate("MainWindow", "Speichern"))
-        self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>"))
-        self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Anzahl</span></p></body></html>"))
         self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Art</span></p></body></html>"))
+        self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Anzahl</span></p></body></html>"))
+        self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>"))
+        self.eintrag_speichern.setText(_translate("MainWindow", "Speichern"))
+        self.label_6.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Ausgabe</span></p></body></html>"))
+        self.url_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">URL</span></p></body></html>"))
         self.combo_art.setItemText(0, _translate("MainWindow", "Aktie"))
         self.combo_art.setItemText(1, _translate("MainWindow", "Währung/Kryptowährung"))
-        self.label_zinssatz.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Zinssatz</span></p></body></html>"))
-        self.label_laufzeit.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Laufzeit</span></p></body></html>"))
+        self.label_35.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">URL</span></p></body></html>"))
         self.label_19.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Datum beginn Rückzahlung</span></p></body></html>"))
         self.label_17.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Zinssatz</span></p></body></html>"))
         self.combo_art_2.setItemText(0, _translate("MainWindow", "Privat Kredit"))
@@ -1243,4 +1348,7 @@ class Ui_MainWindow(object):
         self.label_25.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Datum</span></p></body></html>"))
         self.label_21.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Tagesgeld</span></p></body></html>"))
         self.label_23.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Wert</span></p></body></html>"))
+        self.auswahl_neuer_eintrag_combo.setItemText(0, _translate("MainWindow", "Tagesgeld"))
+        self.auswahl_neuer_eintrag_combo.setItemText(1, _translate("MainWindow", "Aktien / Währungen"))
+        self.auswahl_neuer_eintrag_combo.setItemText(2, _translate("MainWindow", "Kredite "))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Neuer Eintrag"))

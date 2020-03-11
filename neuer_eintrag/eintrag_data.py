@@ -2,15 +2,15 @@ import sqlite3
 
 class Eintrag_Data():
     def __init__(self):
-        self.conn = sqlite3.connect("Database Kopie.db")
+        self.conn = sqlite3.connect("Database.db")
         self.c = self.conn.cursor()
 
     def __del__(self):
         self.conn.close()  # zum freigeben der Datenbank
 
-    def neuer_eintrag(self, name, url, ausgabe, anzahl, art, zinssatz, laufzeit):
-        params = (name, url, ausgabe, anzahl, art, zinssatz, laufzeit)
-        sql = "INSERT INTO anlagen VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)"
+    def neuer_eintrag(self, name, url, ausgabe, anzahl, art):
+        params = (name, url, ausgabe, anzahl, art)
+        sql = "INSERT INTO anlagen VALUES (NULL, ?, ?, ?, ?, ?)"
         self.c.execute(sql, params)
         self.conn.commit()
 
@@ -25,3 +25,8 @@ class Eintrag_Data():
         sql = "INSERT INTO tagesgeld VALUES (NULL, ?, ?, ?, ?)"
         self.c.execute(sql, params)
         self.conn.commit()
+
+    def eigene_aktien_abfrage(self):
+        sql = "Select * FROM anlagen"
+        self.c.execute(sql)
+        return self.c.fetchall()

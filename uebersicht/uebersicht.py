@@ -141,8 +141,9 @@ class Uebersicht():
         self.ui.tages_gewinn.setText(str(gewinn))
         self.ui.tages_gewinn.setStyleSheet("color:#ffffff")
 
-    
+
     def tabelle_fuellen_waehrung(self):
+        self.ui.invest_uebersicht.setRowCount(0)
         liste_der_eintraege = []
         daten_holen = self.general_abfrage_crawler()
         liste_der_anlagen = daten_holen[1]
@@ -186,6 +187,7 @@ class Uebersicht():
 
 
     def tabelle_fuellen_kredite(self):
+        self.ui.kredit_uebersicht.setRowCount(0)
         liste_der_daten = self.uebersicht_data.eigene_kredite_abfragen()
         wert_kredit = 0.0
         for i in range(0, len(liste_der_daten)):
@@ -205,6 +207,7 @@ class Uebersicht():
 
 
     def tabelle_fuellen_tages(self):
+        self.ui.tages_uebersicht.setRowCount(0)
         liste_der_daten = self.uebersicht_data.tageszins_abfrage()
         ausgaben = 0.0
         gesamt = 0.0
@@ -221,7 +224,7 @@ class Uebersicht():
 
             differenz = datetime.now() - invest_datum
 
-            for i in range(0, int(str(differenz.days))):
+            for p in range(0, int(str(differenz.days))):
                 if gesamt == 0.0:
                     gesamt = ((ausgaben * zins) / (100 * 360)) + ausgaben
                 else:
@@ -229,17 +232,15 @@ class Uebersicht():
                     zwischensumme = ((gesamt * zins) / (100 * 360)) + gesamt
                     gesamt = round(zwischensumme, 2)
 
-            for i in range(0, len(liste_der_daten)):
-                row = self.ui.tages_uebersicht.rowCount()
-                self.ui.tages_uebersicht.insertRow(row)
-
-                self.ui.tages_uebersicht.setItem(row, 0, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][1])))
-                self.ui.tages_uebersicht.setItem(row, 1, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][2])))
-                self.ui.tages_uebersicht.setItem(row, 2, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][3])))
-                gewinn = gesamt - ausgaben
-                gewinn = round(gewinn, 2)
-                self.ui.tages_uebersicht.setItem(row, 3, QtWidgets.QTableWidgetItem(str(gewinn)))
-                self.ui.tages_uebersicht.setItem(row, 4, QtWidgets.QTableWidgetItem(str(differenz.days)))
+            gewinn = gesamt - ausgaben
+            gewinn = round(gewinn, 2)
+            row = self.ui.tages_uebersicht.rowCount()
+            self.ui.tages_uebersicht.insertRow(row)
+            self.ui.tages_uebersicht.setItem(row, 0, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][1])))
+            self.ui.tages_uebersicht.setItem(row, 1, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][2])))
+            self.ui.tages_uebersicht.setItem(row, 2, QtWidgets.QTableWidgetItem(str(liste_der_daten[i][3])))
+            self.ui.tages_uebersicht.setItem(row, 3, QtWidgets.QTableWidgetItem(str(gewinn)))
+            self.ui.tages_uebersicht.setItem(row, 4, QtWidgets.QTableWidgetItem(str(differenz.days)))
 
             gesamt = 0.0
             ausgaben = 0.0
@@ -275,7 +276,7 @@ class Uebersicht():
         self.ui.gesamt_prozent.setStyleSheet("color:#ffffff; font-size:64pt; border: 2px solid black; border-radius: 5px; align= center")
 
     def neu_laden(self):
-        self.ui.invest_uebersicht.setRowCount(0)
+
         self.tabelle_fuellen_waehrung()
         self.uebersicht_waehrung()
         self.gesamt_anzeigen()

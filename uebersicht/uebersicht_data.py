@@ -2,7 +2,7 @@ import sqlite3
 
 class Uebersicht_Data():
     def __init__(self):
-        self.conn = sqlite3.connect("Database Kopie.db")
+        self.conn = sqlite3.connect("Database.db")
         self.c = self.conn.cursor()
 
     def __del__(self):
